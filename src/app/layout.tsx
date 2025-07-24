@@ -1,9 +1,8 @@
-import type { Metadata } from 'next';
+import { generateSEO, Schema } from '@/components/common/SEO';
+import Footer from '@/components/layout/Footer';
+import Header from '@/components/layout/Header';
 import { Inter, Rubik } from 'next/font/google';
 import './globals.css';
-import { SITE_CONFIG } from '@/lib/constants';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -15,22 +14,7 @@ const rubik = Rubik({
   variable: '--font-rubik',
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: SITE_CONFIG.name,
-    template: `%s | ${SITE_CONFIG.name}`,
-  },
-  description: SITE_CONFIG.description,
-  openGraph: {
-    title: SITE_CONFIG.name,
-    description: SITE_CONFIG.description,
-    url: SITE_CONFIG.url,
-    siteName: SITE_CONFIG.name,
-    images: [SITE_CONFIG.ogImage],
-    locale: 'he_IL',
-    type: 'website',
-  },
-};
+export const metadata = generateSEO();
 
 export default function RootLayout({
   children,
@@ -39,6 +23,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="he" dir="rtl">
+      <head>
+        <Schema 
+          type="Organization" 
+          data={{
+            // Additional organization data can go here
+          }} 
+        />
+      </head>
       <body className={`${inter.variable} ${rubik.variable} font-sans`}>
         <div className="flex min-h-screen flex-col">
           <Header />
