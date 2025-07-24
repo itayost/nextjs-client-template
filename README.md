@@ -28,21 +28,29 @@ A ready-to-use Next.js 15.4+ template for client projects 🚀
    cd client-name
    rm -rf .git
    git init
+   ```
 
-Install dependencies:
-bashnpm install
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-Set up Environment Variables:
-bashcp .env.example .env.local
-# Edit .env.local with your values
+3. **Set up Environment Variables:**
+   ```bash
+   cp .env.example .env.local
+   # Edit .env.local with your values
+   ```
 
-Run the project with Turbopack:
-bashnpm run dev
-# Project runs on http://localhost:3000
+4. **Run the project with Turbopack:**
+   ```bash
+   npm run dev
+   # Project runs on http://localhost:3000
+   ```
 
+## Available Scripts
 
-Available Scripts
-bashnpm run dev          # Development with Turbopack
+```bash
+npm run dev          # Development with Turbopack
 npm run build        # Production build
 npm run start        # Start production server
 npm run lint         # Run ESLint
@@ -50,7 +58,11 @@ npm run format       # Auto-format with Prettier
 npm run type-check   # TypeScript type checking
 npm run check-all    # Run all checks
 npm run clean        # Clean cache and node_modules
-Project Structure
+```
+
+## Project Structure
+
+```
 src/
 ├── app/              # App Router - pages and layouts
 ├── components/       # Shared components
@@ -60,21 +72,23 @@ src/
 ├── lib/             # Utility functions and constants
 ├── hooks/           # Custom React hooks
 └── types/           # TypeScript type definitions
-Customization
-1. Update Client Details
+```
 
-Edit lib/constants.ts with client information
-Replace logo in components/layout/Header.tsx
-Update package.json with project name
+## Customization
 
-2. Customize Design
+### 1. Update Client Details
+- Edit `lib/constants.ts` with client information
+- Replace logo in `components/layout/Header.tsx`
+- Update `package.json` with project name
 
-Colors: tailwind.config.ts
-Fonts: app/layout.tsx
-Global styles: app/globals.css
+### 2. Customize Design
+- Colors: `tailwind.config.ts`
+- Fonts: `app/layout.tsx`
+- Global styles: `app/globals.css`
 
-3. Add Pages
-bashsrc/app/
+### 3. Add Pages
+```bash
+src/app/
 ├── page.tsx         # Home page
 ├── about/
 │   └── page.tsx     # About page
@@ -82,48 +96,51 @@ bashsrc/app/
     ├── layout.tsx   # Shared layout
     └── services/
         └── page.tsx
-Production Deployment
-Vercel (Recommended)
+```
 
-Push to GitHub
-Import in Vercel
-Set Environment Variables
-Deploy! 🚀
+## Production Deployment
 
-Turbopack Build (Alpha)
+### Vercel (Recommended)
+1. Push to GitHub
+2. Import in [Vercel](https://vercel.com)
+3. Set Environment Variables
+4. Deploy! 🚀
+
+### Turbopack Build (Alpha)
 For faster builds:
-bashnext build --turbo
-System Requirements
+```bash
+next build --turbo
+```
 
-Node.js 18.17 or higher (20+ recommended)
-npm 9 or higher
+## System Requirements
 
-Features Overview
-🎨 Pre-built Components
+- **Node.js 18.17** or higher (20+ recommended)
+- **npm 9** or higher
 
-Button (primary, secondary, outline, ghost variants)
-Card with header and content sections
-Responsive navigation with mobile menu
-Footer with contact information
+## Features Overview
 
-🔧 Development Tools
+### 🎨 Pre-built Components
+- Button (primary, secondary, outline, ghost variants)
+- Card with header and content sections
+- Responsive navigation with mobile menu
+- Footer with contact information
 
-TypeScript for type safety
-ESLint configuration for code quality
-Prettier for consistent formatting
-VSCode settings included
+### 🔧 Development Tools
+- TypeScript for type safety
+- ESLint configuration for code quality
+- Prettier for consistent formatting
+- VSCode settings included
 
-🌐 Internationalization
+### 🌐 Internationalization
+- Full RTL support for Hebrew/Arabic
+- Google Fonts integration (Inter + Rubik)
+- Locale-aware formatting utilities
 
-Full RTL support for Hebrew/Arabic
-Google Fonts integration (Inter + Rubik)
-Locale-aware formatting utilities
+### 📱 Responsive Design
+- Mobile-first approach
+- Tailwind CSS breakpoints
+- Container component for consistent spacing
 
-📱 Responsive Design
-
-Mobile-first approach
-Tailwind CSS breakpoints
-Container component for consistent spacing
-
+---
 
 Built with ❤️ for modern web development
