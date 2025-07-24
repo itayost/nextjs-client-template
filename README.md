@@ -1,99 +1,129 @@
 # Next.js Client Template
 
-תבנית בסיסית לפרויקטים של לקוחות עם Next.js 15.4+ 🚀
+A ready-to-use Next.js 15.4+ template for client projects 🚀
 
-## פיצ'רים עיקריים
+## Key Features
 
-- ⚡ **Next.js 15.4.1** - הגרסה העדכנית ביותר
-- 🏎️ **Turbopack** - מהירות פיתוח משופרת
-- ⚛️ **React 19** - תמיכה מלאה
-- 🎨 **Tailwind CSS 3.4** - עיצוב מודרני
-- 📱 **Responsive Design** - תמיכה בכל המכשירים
-- 🇮🇱 **תמיכה מלאה בעברית (RTL)**
-- 🔧 **TypeScript 5.6** - טיפוסים חזקים
-- 📏 **ESLint + Prettier** - קוד נקי ואחיד
-- 🧩 **קומפוננטות UI בסיסיות**
-- 🎯 **SEO Optimized**
-- 📂 **מבנה תיקיות מסודר**
+- ⚡ **Next.js 15.4.1** - Latest stable version
+- 🏎️ **Turbopack** - Enhanced development speed
+- ⚛️ **React 19** - Full support
+- 🎨 **Tailwind CSS 3.4** - Modern styling
+- 📱 **Responsive Design** - Works on all devices
+- 🇮🇱 **Full Hebrew/RTL Support** - Built-in right-to-left support
+- 🔧 **TypeScript 5.6** - Type safety
+- 📏 **ESLint + Prettier** - Clean, consistent code
+- 🧩 **Basic UI Components** - Ready to use
+- 🎯 **SEO Optimized** - Meta tags configured
+- 📂 **Organized Structure** - Clean folder layout
 
-## התחלה מהירה
+## Quick Start
 
-1. **צור פרויקט חדש מה-template:**
+1. **Create a new project from template:**
    ```bash
-   # שיטה 1: דרך GitHub
+   # Method 1: Using GitHub CLI
    gh repo create client-name --template your-username/nextjs-client-template --clone
    
-   # שיטה 2: Clone ידני
+   # Method 2: Manual clone
    git clone https://github.com/your-username/nextjs-client-template.git client-name
    cd client-name
    rm -rf .git
    git init
 
-התקן dependencies:
+Install dependencies:
 bashnpm install
 
-הגדר Environment Variables:
+Set up Environment Variables:
 bashcp .env.example .env.local
-# ערוך את .env.local עם הערכים שלך
+# Edit .env.local with your values
 
-הרץ את הפרויקט עם Turbopack:
+Run the project with Turbopack:
 bashnpm run dev
-# הפרויקט ירוץ על http://localhost:3000
+# Project runs on http://localhost:3000
 
 
-Scripts זמינים
-bashnpm run dev          # פיתוח עם Turbopack
-npm run build        # בנייה לפרודקשן
-npm run start        # הרצת פרודקשן
-npm run lint         # בדיקת קוד
-npm run format       # פרמוט אוטומטי
-npm run type-check   # בדיקת TypeScript
-npm run check-all    # הרצת כל הבדיקות
-npm run clean        # ניקוי cache ו-node_modules
-מבנה הפרויקט
+Available Scripts
+bashnpm run dev          # Development with Turbopack
+npm run build        # Production build
+npm run start        # Start production server
+npm run lint         # Run ESLint
+npm run format       # Auto-format with Prettier
+npm run type-check   # TypeScript type checking
+npm run check-all    # Run all checks
+npm run clean        # Clean cache and node_modules
+Project Structure
 src/
-├── app/              # App Router - דפים ו-layouts
-├── components/       # קומפוננטות משותפות
-│   ├── ui/          # קומפוננטות UI בסיסיות
+├── app/              # App Router - pages and layouts
+├── components/       # Shared components
+│   ├── ui/          # Basic UI components
 │   ├── layout/      # Header, Footer, Navigation
-│   └── common/      # קומפוננטות כלליות
-├── lib/             # פונקציות עזר וקבועים
+│   └── common/      # Common components
+├── lib/             # Utility functions and constants
 ├── hooks/           # Custom React hooks
-└── types/           # TypeScript types
-התאמה אישית
-1. עדכון פרטי הלקוח
+└── types/           # TypeScript type definitions
+Customization
+1. Update Client Details
 
-ערוך lib/constants.ts עם פרטי הלקוח
-החלף את הלוגו ב-components/layout/Header.tsx
-עדכן package.json עם שם הפרויקט
+Edit lib/constants.ts with client information
+Replace logo in components/layout/Header.tsx
+Update package.json with project name
 
-2. התאמת עיצוב
+2. Customize Design
 
-צבעים: tailwind.config.ts
-פונטים: app/layout.tsx
-סגנונות גלובליים: app/globals.css
+Colors: tailwind.config.ts
+Fonts: app/layout.tsx
+Global styles: app/globals.css
 
-3. הוספת דפים
+3. Add Pages
 bashsrc/app/
-├── page.tsx         # דף הבית
+├── page.tsx         # Home page
 ├── about/
-│   └── page.tsx     # דף אודות
-└── (marketing)/     # קבוצת דפים
-    ├── layout.tsx   # Layout משותף
+│   └── page.tsx     # About page
+└── (marketing)/     # Route group
+    ├── layout.tsx   # Shared layout
     └── services/
         └── page.tsx
-פריסה ל-Production
-Vercel (מומלץ)
+Production Deployment
+Vercel (Recommended)
 
-Push ל-GitHub
-Import ב-Vercel
-הגדר Environment Variables
+Push to GitHub
+Import in Vercel
+Set Environment Variables
 Deploy! 🚀
 
-דרישות מערכת
+Turbopack Build (Alpha)
+For faster builds:
+bashnext build --turbo
+System Requirements
 
-Node.js 18.17 ומעלה (מומלץ 20+)
-npm 9 ומעלה
+Node.js 18.17 or higher (20+ recommended)
+npm 9 or higher
+
+Features Overview
+🎨 Pre-built Components
+
+Button (primary, secondary, outline, ghost variants)
+Card with header and content sections
+Responsive navigation with mobile menu
+Footer with contact information
+
+🔧 Development Tools
+
+TypeScript for type safety
+ESLint configuration for code quality
+Prettier for consistent formatting
+VSCode settings included
+
+🌐 Internationalization
+
+Full RTL support for Hebrew/Arabic
+Google Fonts integration (Inter + Rubik)
+Locale-aware formatting utilities
+
+📱 Responsive Design
+
+Mobile-first approach
+Tailwind CSS breakpoints
+Container component for consistent spacing
 
 
-נבנה עם ❤️ עבור מפתחים ישראלים
+Built with ❤️ for modern web development
