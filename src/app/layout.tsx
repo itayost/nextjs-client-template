@@ -1,3 +1,5 @@
+import Analytics from '@/components/common/Analytics';
+import CookieConsent from '@/components/common/CookieConsent';
 import { generateSEO, Schema } from '@/components/common/SEO';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
@@ -32,11 +34,13 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} ${rubik.variable} font-sans`}>
+        <Analytics />
         <div className="flex min-h-screen flex-col">
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
         </div>
+        <CookieConsent />
       </body>
     </html>
   );

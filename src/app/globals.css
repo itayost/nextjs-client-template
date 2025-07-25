@@ -9,12 +9,26 @@
   }
 
   body {
-    @apply bg-white text-gray-900;
+    @apply bg-white text-gray-900 antialiased;
+  }
+
+  /* Modern selection color */
+  ::selection {
+    @apply bg-primary-500/20 text-primary-900;
   }
 
   /* שיפורים לעברית */
   body[dir="rtl"] {
     font-family: var(--font-rubik), var(--font-inter), system-ui, sans-serif;
+  }
+
+  /* Modern focus styles */
+  *:focus {
+    @apply outline-none;
+  }
+  
+  *:focus-visible {
+    @apply ring-2 ring-primary-500 ring-offset-2;
   }
 }
 
@@ -24,7 +38,22 @@
   }
 
   .section {
-    @apply py-12 md:py-16 lg:py-20;
+    @apply py-16 md:py-24 lg:py-32;
+  }
+  
+  /* Modern gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
+  }
+  
+  /* Modern glass effect */
+  .glass {
+    @apply bg-white/80 backdrop-blur-lg border border-gray-200/50;
+  }
+  
+  /* Modern card hover */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
 }
 
